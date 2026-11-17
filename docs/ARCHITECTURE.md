@@ -29,26 +29,22 @@ The model never renames files or executes tools by itself. A caller owns all mut
 
 ## 3. Logical data flow
 
-```text
- [Discovery] --> [Extraction Adapters] --> [Normalized Segments]
-                                             |
-                                      [Semantic Parser]
-                                             |
-                          +------------------+-----------------+
-                          |                                    |
-                     [Concept Store]                      [Dense Encoder]
-                          |                                    |
-                  [Evidence Graph]                      [Vector Index]
-                          |                                    |
-                        [Lexical Index] <--- [Text + Names] --+
-                          |                                    |
-                          +--------------+---------------------+
-                                         |
-                                 [Hybrid Retriever]
-                                         |
-                             [Permissions + Rerank]
-                                         |
-                               [Grounded Search API]
+```mermaid
+flowchart TD
+    A["Workspace discovery"] --> B["Extraction adapters"]
+    B --> C["Normalized segments"]
+    C --> D["Semantic parser"]
+    D --> E["Concept store"]
+    E --> F["Evidence graph and scoped memory"]
+    C --> G["Dense encoder"]
+    G --> H["Vector index"]
+    C --> I["Text and path lexical index"]
+    F --> J["Contextual candidates"]
+    H --> K["Hybrid retriever"]
+    I --> K
+    J --> K
+    K --> L["Permission filtering and reranking"]
+    L --> M["Grounded search API"]
 ```
 
 ## 4. Proposed modules
