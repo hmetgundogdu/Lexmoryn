@@ -57,30 +57,22 @@ Each hypothesis can be rejected. If existing retrieval stacks meet the same qual
 
 ## 3. Proposed system
 
-```text
-                      WORKSPACE
-      paths | content | metadata | relationships
-                         |
-        secure discovery + format-specific extractors
-                         |
-             segments / symbols / spans
-                         |
-          semantic parser / optional encoder
-                         |
-           concepts + evidence references
-                         |
-              WORKSPACE MEMORY (K_W)
-      aliases | typed relations | confidence | expiry
-                         |
-    +--------------------+--------------------+
-    |                    |                    |
- lexical/exact     dense retrieval     structure/graph
-    |                    |                    |
-    +--------------------+--------------------+
-                         |
-                 fusion + reranking
-                         |
-       cited file/passage results and structured API
+```mermaid
+flowchart TD
+    W["Workspace<br/>Paths · Content · Metadata · Relations"]
+    W --> X["Secure discovery and format-specific extractors"]
+    X --> S["Segments, symbols, and source spans"]
+    S --> P["Semantic parser / optional encoder"]
+    P --> C["Concepts with evidence references"]
+    C --> M["Workspace memory<br/>Aliases · Typed relations · Validity"]
+    S --> L["Lexical / exact retrieval index"]
+    S --> D["Dense retrieval index"]
+    M --> G["Structure / evidence graph"]
+    L --> F["Candidate fusion and reranking"]
+    D --> F
+    G --> F
+    F --> A["Access-control enforcement"]
+    A --> R["Cited file/passage results and structured API"]
 ```
 
 ### 3.1 Ingestion and extractors
