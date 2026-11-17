@@ -1,0 +1,2 @@
+Artifact checksum: deadbeefcafebabe
+Verification: accepted for deployment.

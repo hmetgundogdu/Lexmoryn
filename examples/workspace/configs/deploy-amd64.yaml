@@ -1,0 +1,4 @@
+environment: staging
+architecture: amd64
+image: registry.example.invalid/demo:v1.2.4
+replicas: 1

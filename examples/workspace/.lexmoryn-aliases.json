@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "aliases": [
+    {
+      "alias": "Eagle",
+      "canonical": "payment processing service",
+      "targets": ["src/EagleService.cs"],
+      "status": "verified",
+      "evidence": {
+        "path": "docs/architecture.md",
+        "start_line": 3,
+        "end_line": 3,
+        "quote": "Eagle is the payment processing service implemented in [src/EagleService.cs](../src/EagleService.cs)."
+      }
+    },
+    {
+      "alias": "Falcon",
+      "canonical": "fraud detection service",
+      "targets": ["src/Falcon.cs"],
+      "status": "inferred",
+      "evidence": {
+        "path": "docs/ideas.md",
+        "start_line": 2,
+        "end_line": 2,
+        "quote": "Falcon might become the fraud detection service in src/Falcon.cs; this is a conjecture."
+      }
+    }
+  ]
+}

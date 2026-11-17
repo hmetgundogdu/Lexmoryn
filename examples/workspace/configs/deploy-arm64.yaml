@@ -1,0 +1,4 @@
+environment: production
+architecture: arm64
+image: registry.example.invalid/demo:v1.2.3
+replicas: 3

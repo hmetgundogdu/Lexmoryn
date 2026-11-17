@@ -1,0 +1,5 @@
+{
+  "warehouse": "north",
+  "low_stock_threshold": 5,
+  "notification": "alert when inventory is almost depleted"
+}

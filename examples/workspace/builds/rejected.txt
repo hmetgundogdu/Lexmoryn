@@ -1,0 +1,2 @@
+Artifact checksum: deadbeefcafebabf
+Verification: rejected; investigate this separate build.

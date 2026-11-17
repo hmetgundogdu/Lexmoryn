@@ -1,0 +1,2 @@
+Monthly availability review
+The service met its uptime objective. The outage budget was not exhausted.

@@ -1,0 +1,3862 @@
+{
+  "evaluation_version": 1,
+  "dataset": "synthetic-payments-workspace-v1",
+  "judgment_provenance": "Agent-authored, explicitly curated synthetic relevance judgments, inspected against source spans. Not independent human annotations or a held-out real-world benchmark. Review before drawing quality conclusions.",
+  "query_file_sha256": "8175ab8a27e9e89fb520be600a20fe0a1ff49a125df06cb53555e6a0a438a6b0",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "threads": 2,
+    "versions": {
+      "lexmoryn": "0.1.0",
+      "numpy": "2.5.5",
+      "onnxruntime": "1.32.0",
+      "tokenizers": "0.23.3",
+      "pathspec": "1.1.1"
+    }
+  },
+  "protocol": {
+    "modes": [
+      "lexical",
+      "dense",
+      "hybrid",
+      "memory"
+    ],
+    "repeats": 3,
+    "top_k": 10,
+    "strict_ids": true,
+    "rrf_k": 60,
+    "warmup_per_query": 1,
+    "index_time_excludes_model_load": true,
+    "peak_rss_scope": "fresh worker: model load, indexing and search"
+  },
+  "results": [
+    {
+      "mode": "lexical",
+      "recall_at_5": 0.8928571428571429,
+      "recall_at_10": 0.8928571428571429,
+      "mrr_at_10": 0.9285714285714286,
+      "p50_latency_ms": 68.11387510970235,
+      "p95_latency_ms": 75.88749984279275,
+      "timed_searches": 84,
+      "index_seconds": 0.2294792919419706,
+      "model_load_seconds": 1.2479722499847412e-07,
+      "engine_load_seconds": 0.014008499681949615,
+      "peak_rss_mib": 32.875,
+      "index_bytes": 786432,
+      "files": 1000,
+      "chunks": 1000,
+      "relations": 6,
+      "corpus_hash": "5c48ba3caf0f70162a9471457790b1ec1dec526d1a3409eb62c05ef0a6161796",
+      "alias_file_hash": "2af87773b6c1568ed587770c0d4749ed529a409d46e81078ab9f6423ef23f03e",
+      "model": null,
+      "exact_id_false_positives": 0,
+      "exact_id_results": 8,
+      "source_locations_correct": 114,
+      "source_locations_checked": 114,
+      "judged_passage_overlaps": 24,
+      "judged_passages_retrieved": 24,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "prevent a customer being billed twice after retrying",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/idempotency.md",
+            "docs/retention.md",
+            "docs/disaster-recovery.md",
+            "docs/birds.md",
+            "releases/v1.2.4.md",
+            "docs/ideas.md",
+            "archive/cycling_00003.txt",
+            "archive/cycling_00011.txt",
+            "archive/cycling_00019.txt",
+            "archive/cycling_00027.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q02",
+          "query": "match incoming bank transfers to unpaid invoices",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/accounting/settlement.py",
+            "invoices/current.json",
+            "invoices/previous.json",
+            "docs/cache.md",
+            "docs/queues.md",
+            "web/client.ts",
+            "src/accounting/ledger.py",
+            "docs/disaster-recovery.md",
+            "docs/birds.md",
+            "docs/architecture.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/accounting/settlement.py",
+              "start_line": 1,
+              "end_line": 6
+            },
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q03",
+          "query": "payment processing service",
+          "category": "alias",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/architecture.md",
+            "src/EagleService.cs",
+            "reports/monthly.txt",
+            "docs/ideas.md",
+            "docs/abbreviations.md",
+            "docs/disaster-recovery.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            },
+            {
+              "path": "src/EagleService.cs",
+              "start_line": 1,
+              "end_line": 9
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q04",
+          "query": "Eagle",
+          "category": "alias",
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/EagleService.cs",
+            "docs/birds.md",
+            "archive/birds_00006.txt",
+            "archive/birds_00014.txt",
+            "archive/birds_00022.txt",
+            "archive/birds_00030.txt",
+            "archive/birds_00038.txt",
+            "archive/birds_00046.txt",
+            "archive/birds_00054.txt",
+            "archive/birds_00062.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/EagleService.cs",
+              "start_line": 1,
+              "end_line": 9
+            },
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/birds_00006.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q05",
+          "query": "stable release v1.2.3",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.3.md",
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.3.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q06",
+          "query": "stable release v1.2.4",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.4.md",
+            "configs/deploy-amd64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.4.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q07",
+          "query": "invoice INV-2048",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "invoices/current.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q08",
+          "query": "checksum deadbeefcafebabe",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "builds/accepted.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q09",
+          "query": "contract 2026-009529",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "contracts/registry.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q10",
+          "query": "thermal pump inspection image",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-amd64.yaml",
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q11",
+          "query": "prod db backup",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "backups/backup_prod_db.sql",
+            "scripts/dump.py"
+          ],
+          "top_evidence": [
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q12",
+          "query": "surface defect detector model",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "models/surface_defect_detector.pt"
+          ],
+          "top_evidence": [
+            {
+              "path": "models/surface_defect_detector.pt",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q13",
+          "query": "SLA availability agreement",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "reports/monthly.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q14",
+          "query": "RPO tolerable data loss",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q15",
+          "query": "persist leak test results from pressure sensor",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/leak_results.py",
+            "web/checkout.ts",
+            "docs/retention.md",
+            "src/accounting/settlement.py",
+            "archive/cycling_00003.txt",
+            "archive/cycling_00011.txt",
+            "archive/cycling_00019.txt",
+            "archive/cycling_00027.txt",
+            "archive/cycling_00035.txt",
+            "archive/cycling_00043.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/leak_results.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q16",
+          "query": "erase old telemetry automatically",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/retention.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q17",
+          "query": "recover the database following an outage",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "reports/monthly.txt",
+            "scripts/dump.py",
+            "archive/birds_00006.txt",
+            "archive/birds_00014.txt",
+            "archive/birds_00022.txt",
+            "archive/birds_00030.txt",
+            "archive/birds_00038.txt",
+            "archive/birds_00046.txt",
+            "archive/birds_00054.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q18",
+          "query": "nightly PostgreSQL snapshot",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "scripts/dump.py",
+            "backups/backup_prod_db.sql",
+            "docs/disaster-recovery.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q19",
+          "query": "replace expired access keys",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/rotation.yml"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/rotation.yml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q20",
+          "query": "sipariş iptalinde ücret iadesi",
+          "category": "multilingual",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/turkish.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/turkish.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q21",
+          "query": "notify the user after a refund is completed",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "docs/ideas.md",
+            "docs/birds.md",
+            "docs/retention.md",
+            "docs/disaster-recovery.md",
+            "docs/architecture.md",
+            "docs/abbreviations.md",
+            "inventory/catalogue.json",
+            "releases/v1.2.30.md",
+            "src/EagleService.cs",
+            "docs/queues.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/ideas.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q22",
+          "query": "almacén con pocos productos disponibles",
+          "category": "cross-language",
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/spanish.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/spanish.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q23",
+          "query": "stop the cooling pump when its temperature is too high",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "inventory/catalogue.json",
+            "docs/cache.md",
+            "docs/birds.md",
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "reports/monthly.txt",
+            "docs/queues.md",
+            "docs/ideas.md",
+            "docs/abbreviations.md",
+            "releases/v1.2.30.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q24",
+          "query": "retry unfinished work after a process failure",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/queues.md",
+            "docs/retention.md",
+            "docs/disaster-recovery.md",
+            "docs/birds.md",
+            "releases/v1.2.4.md",
+            "docs/ideas.md",
+            "archive/cycling_00003.txt",
+            "archive/cycling_00011.txt",
+            "archive/cycling_00019.txt",
+            "archive/cycling_00027.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q25",
+          "query": "expire frequently requested product descriptions from memory",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/cache.md",
+            "web/checkout.ts",
+            "docs/retention.md",
+            "src/accounting/settlement.py"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q26",
+          "query": "connect spans across separate services",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/observability.md",
+            "builds/rejected.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/observability.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "builds/rejected.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q27",
+          "query": "production deployment arm64",
+          "category": "path-and-content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q28",
+          "query": "sendPurchase browser gateway",
+          "category": "symbol",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "web/client.ts",
+            "web/checkout.ts",
+            "docs/idempotency.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "web/client.ts",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        }
+      ]
+    },
+    {
+      "mode": "dense",
+      "recall_at_5": 0.9285714285714286,
+      "recall_at_10": 0.9642857142857143,
+      "mrr_at_10": 0.941468253968254,
+      "p50_latency_ms": 72.46858300641179,
+      "p95_latency_ms": 75.46712504699826,
+      "timed_searches": 84,
+      "index_seconds": 3.3290062500163913,
+      "model_load_seconds": 0.3218169999308884,
+      "engine_load_seconds": 0.015196167398244143,
+      "peak_rss_mib": 748.875,
+      "index_bytes": 2428928,
+      "files": 1000,
+      "chunks": 1000,
+      "relations": 6,
+      "corpus_hash": "5c48ba3caf0f70162a9471457790b1ec1dec526d1a3409eb62c05ef0a6161796",
+      "alias_file_hash": "2af87773b6c1568ed587770c0d4749ed529a409d46e81078ab9f6423ef23f03e",
+      "model": {
+        "repo": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "weights": "onnx/model_quantized.onnx",
+        "pooling": "masked-mean+l2",
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "max_tokens": 512,
+        "sha256": {
+          "onnx/model_quantized.onnx": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+          "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+          "config.json": "cb99455288675345e1a4f411438d5d0adbba5fbd3a67ea4fb03c015433b996c1",
+          "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+          "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7"
+        }
+      },
+      "exact_id_false_positives": 0,
+      "exact_id_results": 8,
+      "source_locations_correct": 213,
+      "source_locations_checked": 213,
+      "judged_passage_overlaps": 26,
+      "judged_passages_retrieved": 26,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "prevent a customer being billed twice after retrying",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "configs/rotation.yml",
+            "reports/monthly.txt",
+            "archive/cycling_00219.txt",
+            "docs/cache.md",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00275.txt",
+            "archive/cycling_00211.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q02",
+          "query": "match incoming bank transfers to unpaid invoices",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/accounting/settlement.py",
+            "invoices/current.json",
+            "invoices/previous.json",
+            "docs/queues.md",
+            "docs/ideas.md",
+            "reports/monthly.txt",
+            "releases/v1.2.30.md",
+            "docs/disaster-recovery.md",
+            "archive/shipping_00255.txt",
+            "archive/shipping_00527.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/accounting/settlement.py",
+              "start_line": 1,
+              "end_line": 6
+            },
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q03",
+          "query": "payment processing service",
+          "category": "alias",
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/architecture.md",
+            "web/client.ts",
+            "reports/monthly.txt",
+            "archive/shipping_00471.txt",
+            "archive/shipping_00655.txt",
+            "docs/idempotency.md",
+            "invoices/current.json",
+            "archive/shipping_00175.txt",
+            "archive/shipping_00775.txt",
+            "archive/shipping_00255.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            },
+            {
+              "path": "web/client.ts",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q04",
+          "query": "Eagle",
+          "category": "alias",
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr_at_10": 0.25,
+          "ranked_paths": [
+            "docs/birds.md",
+            "archive/birds_00798.txt",
+            "archive/birds_00774.txt",
+            "docs/architecture.md",
+            "archive/birds_00766.txt",
+            "archive/birds_00342.txt",
+            "archive/birds_00790.txt",
+            "archive/birds_00558.txt",
+            "archive/birds_00750.txt",
+            "archive/birds_00398.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/birds_00798.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/birds_00774.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q05",
+          "query": "stable release v1.2.3",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.3.md",
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.3.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q06",
+          "query": "stable release v1.2.4",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.4.md",
+            "configs/deploy-amd64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.4.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q07",
+          "query": "invoice INV-2048",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "invoices/current.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q08",
+          "query": "checksum deadbeefcafebabe",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "builds/accepted.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q09",
+          "query": "contract 2026-009529",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "contracts/registry.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q10",
+          "query": "thermal pump inspection image",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "models/surface_defect_detector.pt",
+            "archive/astronomy_00297.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00587.txt",
+            "archive/astronomy_00849.txt",
+            "archive/cycling_00659.txt",
+            "archive/cycling_00259.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "models/surface_defect_detector.pt",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q11",
+          "query": "prod db backup",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "backups/backup_prod_db.sql",
+            "scripts/dump.py",
+            "docs/disaster-recovery.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "models/surface_defect_detector.pt",
+            "docs/abbreviations.md",
+            "docs/retention.md",
+            "invoices/previous.json",
+            "configs/rotation.yml"
+          ],
+          "top_evidence": [
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q12",
+          "query": "surface defect detector model",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "models/surface_defect_detector.pt",
+            "docs/ideas.md",
+            "builds/accepted.txt",
+            "configs/deploy-arm64.yaml",
+            "builds/rejected.txt",
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-amd64.yaml",
+            "releases/v1.2.30.md",
+            "docs/observability.md",
+            "docs/cache.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "models/surface_defect_detector.pt",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/ideas.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q13",
+          "query": "SLA availability agreement",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "reports/monthly.txt",
+            "contracts/other.json",
+            "contracts/registry.json",
+            "inventory/catalogue.json",
+            "archive/shipping_00095.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00767.txt",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00879.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "contracts/other.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q14",
+          "query": "RPO tolerable data loss",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "docs/disaster-recovery.md",
+            "backups/backup_prod_db.sql",
+            "configs/rotation.yml",
+            "reports/monthly.txt",
+            "docs/retention.md",
+            "docs/cache.md",
+            "inventory/catalogue.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.3-rc1.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q15",
+          "query": "persist leak test results from pressure sensor",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/leak_results.py",
+            "archive/cycling_00595.txt",
+            "archive/cycling_00603.txt",
+            "archive/cycling_00179.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00371.txt",
+            "archive/cycling_00691.txt",
+            "archive/cycling_00771.txt",
+            "archive/cycling_00803.txt",
+            "archive/cycling_00891.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/leak_results.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "archive/cycling_00595.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00603.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q16",
+          "query": "erase old telemetry automatically",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/retention.md",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00211.txt",
+            "archive/cycling_00555.txt",
+            "archive/cycling_00659.txt",
+            "archive/cycling_00299.txt",
+            "archive/cycling_00563.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/cycling_00291.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00667.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q17",
+          "query": "recover the database following an outage",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "scripts/dump.py",
+            "backups/backup_prod_db.sql",
+            "reports/monthly.txt",
+            "docs/retention.md",
+            "docs/cache.md",
+            "releases/v1.2.3.md",
+            "docs/queues.md",
+            "builds/rejected.txt",
+            "builds/accepted.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q18",
+          "query": "nightly PostgreSQL snapshot",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "scripts/dump.py",
+            "backups/backup_prod_db.sql",
+            "archive/astronomy_00785.txt",
+            "archive/shipping_00135.txt",
+            "archive/shipping_00735.txt",
+            "archive/astronomy_00185.txt",
+            "archive/shipping_00535.txt",
+            "archive/astronomy_00145.txt",
+            "archive/shipping_00711.txt",
+            "archive/astronomy_00513.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "archive/astronomy_00785.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q19",
+          "query": "replace expired access keys",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/rotation.yml",
+            "docs/retention.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "archive/cycling_00563.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00763.txt",
+            "archive/cycling_00915.txt",
+            "archive/cycling_00267.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/rotation.yml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q20",
+          "query": "sipariş iptalinde ücret iadesi",
+          "category": "multilingual",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/turkish.md",
+            "backups/backup_prod_db.sql",
+            "invoices/previous.json",
+            "docs/idempotency.md",
+            "contracts/other.json",
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "invoices/current.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.30.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/turkish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q21",
+          "query": "notify the user after a refund is completed",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 0.1111111111111111,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "invoices/previous.json",
+            "docs/queues.md",
+            "reports/monthly.txt",
+            "inventory/catalogue.json",
+            "invoices/current.json",
+            "docs/cache.md",
+            "releases/v1.2.3.md",
+            "docs/turkish.md",
+            "docs/retention.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q22",
+          "query": "almacén con pocos productos disponibles",
+          "category": "cross-language",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/spanish.md",
+            "inventory/catalogue.json",
+            "configs/deploy-arm64.yaml",
+            "reports/monthly.txt",
+            "releases/v1.2.30.md",
+            "configs/deploy-amd64.yaml",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00151.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00127.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/spanish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q23",
+          "query": "stop the cooling pump when its temperature is too high",
+          "category": "cross-language",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "文档/温度.md",
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "docs/retention.md",
+            "releases/v1.2.30.md",
+            "docs/cache.md",
+            "archive/cycling_00219.txt",
+            "archive/cycling_00459.txt",
+            "archive/cycling_00203.txt",
+            "archive/cycling_00707.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "文档/温度.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q24",
+          "query": "retry unfinished work after a process failure",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "reports/monthly.txt",
+            "builds/rejected.txt",
+            "docs/cache.md",
+            "releases/v1.2.30.md",
+            "src/leak_results.py",
+            "inventory/catalogue.json",
+            "models/surface_defect_detector.pt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q25",
+          "query": "expire frequently requested product descriptions from memory",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/cache.md",
+            "docs/retention.md",
+            "archive/shipping_00471.txt",
+            "archive/shipping_00511.txt",
+            "archive/shipping_00247.txt",
+            "docs/idempotency.md",
+            "archive/shipping_00599.txt",
+            "archive/shipping_00671.txt",
+            "archive/shipping_00911.txt",
+            "archive/shipping_00831.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/shipping_00471.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q26",
+          "query": "connect spans across separate services",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/observability.md",
+            "reports/monthly.txt",
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/architecture.md",
+            "archive/shipping_00175.txt",
+            "archive/shipping_00663.txt",
+            "archive/shipping_00255.txt",
+            "src/EagleService.cs",
+            "archive/shipping_00671.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/observability.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q27",
+          "query": "production deployment arm64",
+          "category": "path-and-content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q28",
+          "query": "sendPurchase browser gateway",
+          "category": "symbol",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "web/client.ts",
+            "web/checkout.ts",
+            "docs/architecture.md",
+            "archive/shipping_00463.txt",
+            "archive/shipping_00439.txt",
+            "archive/shipping_00391.txt",
+            "archive/shipping_00191.txt",
+            "archive/shipping_00247.txt",
+            "archive/shipping_00791.txt",
+            "archive/shipping_00743.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "web/client.ts",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            }
+          ],
+          "aliases_used": []
+        }
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "recall_at_5": 0.8928571428571429,
+      "recall_at_10": 0.8928571428571429,
+      "mrr_at_10": 0.8928571428571429,
+      "p50_latency_ms": 73.79504223354161,
+      "p95_latency_ms": 79.11279192194343,
+      "timed_searches": 84,
+      "index_seconds": 3.3970814580097795,
+      "model_load_seconds": 0.3169661252759397,
+      "engine_load_seconds": 0.01853466685861349,
+      "peak_rss_mib": 749.40625,
+      "index_bytes": 2428928,
+      "files": 1000,
+      "chunks": 1000,
+      "relations": 6,
+      "corpus_hash": "5c48ba3caf0f70162a9471457790b1ec1dec526d1a3409eb62c05ef0a6161796",
+      "alias_file_hash": "2af87773b6c1568ed587770c0d4749ed529a409d46e81078ab9f6423ef23f03e",
+      "model": {
+        "repo": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "weights": "onnx/model_quantized.onnx",
+        "pooling": "masked-mean+l2",
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "max_tokens": 512,
+        "sha256": {
+          "onnx/model_quantized.onnx": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+          "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+          "config.json": "cb99455288675345e1a4f411438d5d0adbba5fbd3a67ea4fb03c015433b996c1",
+          "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+          "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7"
+        }
+      },
+      "exact_id_false_positives": 0,
+      "exact_id_results": 8,
+      "source_locations_correct": 215,
+      "source_locations_checked": 215,
+      "judged_passage_overlaps": 24,
+      "judged_passages_retrieved": 24,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "prevent a customer being billed twice after retrying",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "archive/cycling_00219.txt",
+            "archive/cycling_00211.txt",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00275.txt",
+            "archive/cycling_00243.txt",
+            "archive/cycling_00267.txt",
+            "archive/cycling_00235.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q02",
+          "query": "match incoming bank transfers to unpaid invoices",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/accounting/settlement.py",
+            "invoices/current.json",
+            "invoices/previous.json",
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "web/client.ts",
+            "src/accounting/ledger.py",
+            "docs/architecture.md",
+            "docs/cache.md",
+            "docs/birds.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/accounting/settlement.py",
+              "start_line": 1,
+              "end_line": 6
+            },
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q03",
+          "query": "payment processing service",
+          "category": "alias",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/architecture.md",
+            "reports/monthly.txt",
+            "docs/disaster-recovery.md",
+            "src/EagleService.cs",
+            "docs/ideas.md",
+            "docs/abbreviations.md",
+            "web/client.ts",
+            "archive/shipping_00471.txt",
+            "archive/shipping_00655.txt",
+            "docs/idempotency.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q04",
+          "query": "Eagle",
+          "category": "alias",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "docs/birds.md",
+            "archive/birds_00078.txt",
+            "archive/birds_00054.txt",
+            "archive/birds_00062.txt",
+            "archive/birds_00166.txt",
+            "archive/birds_00342.txt",
+            "archive/birds_00118.txt",
+            "archive/birds_00070.txt",
+            "archive/birds_00022.txt",
+            "archive/birds_00182.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/birds_00078.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/birds_00054.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q05",
+          "query": "stable release v1.2.3",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.3.md",
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.3.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q06",
+          "query": "stable release v1.2.4",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.4.md",
+            "configs/deploy-amd64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.4.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q07",
+          "query": "invoice INV-2048",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "invoices/current.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q08",
+          "query": "checksum deadbeefcafebabe",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "builds/accepted.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q09",
+          "query": "contract 2026-009529",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "contracts/registry.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q10",
+          "query": "thermal pump inspection image",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-arm64.yaml",
+            "configs/deploy-amd64.yaml",
+            "contracts/registry.json",
+            "models/surface_defect_detector.pt",
+            "archive/astronomy_00297.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00587.txt",
+            "archive/astronomy_00849.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q11",
+          "query": "prod db backup",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "backups/backup_prod_db.sql",
+            "scripts/dump.py",
+            "docs/disaster-recovery.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "models/surface_defect_detector.pt",
+            "docs/abbreviations.md",
+            "docs/retention.md",
+            "invoices/previous.json",
+            "configs/rotation.yml"
+          ],
+          "top_evidence": [
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q12",
+          "query": "surface defect detector model",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "models/surface_defect_detector.pt",
+            "docs/ideas.md",
+            "builds/accepted.txt",
+            "configs/deploy-arm64.yaml",
+            "builds/rejected.txt",
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-amd64.yaml",
+            "releases/v1.2.30.md",
+            "docs/observability.md",
+            "docs/cache.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "models/surface_defect_detector.pt",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/ideas.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q13",
+          "query": "SLA availability agreement",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "reports/monthly.txt",
+            "contracts/other.json",
+            "contracts/registry.json",
+            "inventory/catalogue.json",
+            "archive/shipping_00095.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00767.txt",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00879.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "contracts/other.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q14",
+          "query": "RPO tolerable data loss",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "docs/disaster-recovery.md",
+            "backups/backup_prod_db.sql",
+            "configs/rotation.yml",
+            "reports/monthly.txt",
+            "docs/retention.md",
+            "docs/cache.md",
+            "inventory/catalogue.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.3-rc1.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q15",
+          "query": "persist leak test results from pressure sensor",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/leak_results.py",
+            "archive/cycling_00179.txt",
+            "archive/cycling_00003.txt",
+            "archive/cycling_00187.txt",
+            "archive/cycling_00123.txt",
+            "archive/cycling_00011.txt",
+            "archive/cycling_00371.txt",
+            "archive/cycling_00595.txt",
+            "archive/cycling_00091.txt",
+            "archive/cycling_00115.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/leak_results.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "archive/cycling_00179.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00003.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q16",
+          "query": "erase old telemetry automatically",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/retention.md",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00211.txt",
+            "archive/cycling_00555.txt",
+            "archive/cycling_00659.txt",
+            "archive/cycling_00299.txt",
+            "archive/cycling_00563.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/cycling_00291.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00667.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q17",
+          "query": "recover the database following an outage",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "scripts/dump.py",
+            "reports/monthly.txt",
+            "docs/cache.md",
+            "releases/v1.2.30.md",
+            "docs/queues.md",
+            "docs/retention.md",
+            "docs/abbreviations.md",
+            "archive/birds_00006.txt",
+            "archive/birds_00014.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q18",
+          "query": "nightly PostgreSQL snapshot",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "scripts/dump.py",
+            "backups/backup_prod_db.sql",
+            "docs/disaster-recovery.md",
+            "archive/astronomy_00785.txt",
+            "archive/shipping_00135.txt",
+            "archive/shipping_00735.txt",
+            "archive/astronomy_00185.txt",
+            "archive/shipping_00535.txt",
+            "archive/astronomy_00145.txt",
+            "archive/shipping_00711.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q19",
+          "query": "replace expired access keys",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/rotation.yml",
+            "docs/retention.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "archive/cycling_00563.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00763.txt",
+            "archive/cycling_00915.txt",
+            "archive/cycling_00267.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/rotation.yml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q20",
+          "query": "sipariş iptalinde ücret iadesi",
+          "category": "multilingual",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/turkish.md",
+            "backups/backup_prod_db.sql",
+            "invoices/previous.json",
+            "docs/idempotency.md",
+            "contracts/other.json",
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "invoices/current.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.30.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/turkish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q21",
+          "query": "notify the user after a refund is completed",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "inventory/catalogue.json",
+            "docs/queues.md",
+            "docs/retention.md",
+            "docs/ideas.md",
+            "docs/architecture.md",
+            "releases/v1.2.30.md",
+            "archive/cycling_00163.txt",
+            "archive/cycling_00251.txt",
+            "archive/cycling_00139.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q22",
+          "query": "almacén con pocos productos disponibles",
+          "category": "cross-language",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/spanish.md",
+            "inventory/catalogue.json",
+            "configs/deploy-arm64.yaml",
+            "reports/monthly.txt",
+            "releases/v1.2.30.md",
+            "configs/deploy-amd64.yaml",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00151.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00127.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/spanish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q23",
+          "query": "stop the cooling pump when its temperature is too high",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "docs/cache.md",
+            "contracts/registry.json",
+            "releases/v1.2.30.md",
+            "inventory/catalogue.json",
+            "reports/monthly.txt",
+            "docs/disaster-recovery.md",
+            "docs/queues.md",
+            "docs/retention.md",
+            "archive/cycling_00219.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q24",
+          "query": "retry unfinished work after a process failure",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "archive/cycling_00155.txt",
+            "archive/cycling_00179.txt",
+            "archive/cycling_00171.txt",
+            "archive/cycling_00219.txt",
+            "archive/cycling_00243.txt",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00187.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q25",
+          "query": "expire frequently requested product descriptions from memory",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/cache.md",
+            "docs/retention.md",
+            "web/checkout.ts",
+            "src/accounting/settlement.py",
+            "archive/shipping_00471.txt",
+            "archive/shipping_00511.txt",
+            "archive/shipping_00247.txt",
+            "docs/idempotency.md",
+            "archive/shipping_00599.txt",
+            "archive/shipping_00671.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q26",
+          "query": "connect spans across separate services",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/observability.md",
+            "builds/rejected.txt",
+            "reports/monthly.txt",
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/architecture.md",
+            "archive/shipping_00175.txt",
+            "archive/shipping_00663.txt",
+            "archive/shipping_00255.txt",
+            "src/EagleService.cs"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/observability.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "builds/rejected.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q27",
+          "query": "production deployment arm64",
+          "category": "path-and-content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q28",
+          "query": "sendPurchase browser gateway",
+          "category": "symbol",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "web/client.ts",
+            "web/checkout.ts",
+            "docs/idempotency.md",
+            "docs/architecture.md",
+            "archive/shipping_00463.txt",
+            "archive/shipping_00439.txt",
+            "archive/shipping_00391.txt",
+            "archive/shipping_00191.txt",
+            "archive/shipping_00247.txt",
+            "archive/shipping_00791.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "web/client.ts",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        }
+      ]
+    },
+    {
+      "mode": "memory",
+      "recall_at_5": 0.9285714285714286,
+      "recall_at_10": 0.9285714285714286,
+      "mrr_at_10": 0.9285714285714286,
+      "p50_latency_ms": 73.19552032276988,
+      "p95_latency_ms": 76.96799980476499,
+      "timed_searches": 84,
+      "index_seconds": 3.4764932091347873,
+      "model_load_seconds": 0.33059804094955325,
+      "engine_load_seconds": 0.01518495799973607,
+      "peak_rss_mib": 749.03125,
+      "index_bytes": 2428928,
+      "files": 1000,
+      "chunks": 1000,
+      "relations": 6,
+      "corpus_hash": "5c48ba3caf0f70162a9471457790b1ec1dec526d1a3409eb62c05ef0a6161796",
+      "alias_file_hash": "2af87773b6c1568ed587770c0d4749ed529a409d46e81078ab9f6423ef23f03e",
+      "model": {
+        "repo": "Xenova/multilingual-e5-small",
+        "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+        "weights": "onnx/model_quantized.onnx",
+        "pooling": "masked-mean+l2",
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "max_tokens": 512,
+        "sha256": {
+          "onnx/model_quantized.onnx": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+          "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+          "config.json": "cb99455288675345e1a4f411438d5d0adbba5fbd3a67ea4fb03c015433b996c1",
+          "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+          "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7"
+        }
+      },
+      "exact_id_false_positives": 0,
+      "exact_id_results": 8,
+      "source_locations_correct": 215,
+      "source_locations_checked": 215,
+      "judged_passage_overlaps": 26,
+      "judged_passages_retrieved": 26,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "prevent a customer being billed twice after retrying",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "archive/cycling_00219.txt",
+            "archive/cycling_00211.txt",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00275.txt",
+            "archive/cycling_00243.txt",
+            "archive/cycling_00267.txt",
+            "archive/cycling_00235.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q02",
+          "query": "match incoming bank transfers to unpaid invoices",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/accounting/settlement.py",
+            "invoices/current.json",
+            "invoices/previous.json",
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "web/client.ts",
+            "src/accounting/ledger.py",
+            "docs/architecture.md",
+            "docs/cache.md",
+            "docs/birds.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/accounting/settlement.py",
+              "start_line": 1,
+              "end_line": 6
+            },
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q03",
+          "query": "payment processing service",
+          "category": "alias",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/EagleService.cs",
+            "docs/architecture.md",
+            "docs/birds.md",
+            "archive/birds_00022.txt",
+            "archive/birds_00222.txt",
+            "archive/birds_00054.txt",
+            "archive/birds_00166.txt",
+            "archive/birds_00094.txt",
+            "archive/birds_00142.txt",
+            "archive/birds_00542.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/EagleService.cs",
+              "start_line": 1,
+              "end_line": 9
+            },
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            },
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": [
+            "Eagle"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Eagle",
+          "category": "alias",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/EagleService.cs",
+            "docs/architecture.md",
+            "docs/birds.md",
+            "archive/birds_00054.txt",
+            "archive/birds_00094.txt",
+            "archive/birds_00166.txt",
+            "archive/birds_00062.txt",
+            "archive/birds_00022.txt",
+            "archive/birds_00142.txt",
+            "archive/birds_00558.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/EagleService.cs",
+              "start_line": 1,
+              "end_line": 9
+            },
+            {
+              "path": "docs/architecture.md",
+              "start_line": 1,
+              "end_line": 7
+            },
+            {
+              "path": "docs/birds.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": [
+            "Eagle"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "stable release v1.2.3",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.3.md",
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.3.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q06",
+          "query": "stable release v1.2.4",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "releases/v1.2.4.md",
+            "configs/deploy-amd64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "releases/v1.2.4.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q07",
+          "query": "invoice INV-2048",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "invoices/current.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "invoices/current.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q08",
+          "query": "checksum deadbeefcafebabe",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "builds/accepted.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q09",
+          "query": "contract 2026-009529",
+          "category": "identifier",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "contracts/registry.json"
+          ],
+          "top_evidence": [
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q10",
+          "query": "thermal pump inspection image",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-arm64.yaml",
+            "configs/deploy-amd64.yaml",
+            "contracts/registry.json",
+            "models/surface_defect_detector.pt",
+            "archive/astronomy_00297.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00587.txt",
+            "archive/astronomy_00849.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "configs/deploy-amd64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q11",
+          "query": "prod db backup",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "backups/backup_prod_db.sql",
+            "scripts/dump.py",
+            "docs/disaster-recovery.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "models/surface_defect_detector.pt",
+            "docs/abbreviations.md",
+            "docs/retention.md",
+            "invoices/previous.json",
+            "configs/rotation.yml"
+          ],
+          "top_evidence": [
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q12",
+          "query": "surface defect detector model",
+          "category": "filename",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "models/surface_defect_detector.pt",
+            "docs/ideas.md",
+            "builds/accepted.txt",
+            "configs/deploy-arm64.yaml",
+            "builds/rejected.txt",
+            "media/pump_thermal_inspection.png",
+            "configs/deploy-amd64.yaml",
+            "releases/v1.2.30.md",
+            "docs/observability.md",
+            "docs/cache.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "models/surface_defect_detector.pt",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/ideas.md",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "builds/accepted.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q13",
+          "query": "SLA availability agreement",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "reports/monthly.txt",
+            "contracts/other.json",
+            "contracts/registry.json",
+            "inventory/catalogue.json",
+            "archive/shipping_00095.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00767.txt",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00879.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "contracts/other.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q14",
+          "query": "RPO tolerable data loss",
+          "category": "abbreviation",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/abbreviations.md",
+            "docs/disaster-recovery.md",
+            "backups/backup_prod_db.sql",
+            "configs/rotation.yml",
+            "reports/monthly.txt",
+            "docs/retention.md",
+            "docs/cache.md",
+            "inventory/catalogue.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.3-rc1.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/abbreviations.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q15",
+          "query": "persist leak test results from pressure sensor",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "src/leak_results.py",
+            "archive/cycling_00179.txt",
+            "archive/cycling_00003.txt",
+            "archive/cycling_00187.txt",
+            "archive/cycling_00123.txt",
+            "archive/cycling_00011.txt",
+            "archive/cycling_00371.txt",
+            "archive/cycling_00595.txt",
+            "archive/cycling_00091.txt",
+            "archive/cycling_00115.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "src/leak_results.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "archive/cycling_00179.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00003.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q16",
+          "query": "erase old telemetry automatically",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/retention.md",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00955.txt",
+            "archive/cycling_00579.txt",
+            "archive/cycling_00211.txt",
+            "archive/cycling_00555.txt",
+            "archive/cycling_00659.txt",
+            "archive/cycling_00299.txt",
+            "archive/cycling_00563.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "archive/cycling_00291.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "archive/cycling_00667.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q17",
+          "query": "recover the database following an outage",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "scripts/dump.py",
+            "reports/monthly.txt",
+            "docs/cache.md",
+            "releases/v1.2.30.md",
+            "docs/queues.md",
+            "docs/retention.md",
+            "docs/abbreviations.md",
+            "archive/birds_00006.txt",
+            "archive/birds_00014.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q18",
+          "query": "nightly PostgreSQL snapshot",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "scripts/dump.py",
+            "backups/backup_prod_db.sql",
+            "docs/disaster-recovery.md",
+            "archive/astronomy_00785.txt",
+            "archive/shipping_00135.txt",
+            "archive/shipping_00735.txt",
+            "archive/astronomy_00185.txt",
+            "archive/shipping_00535.txt",
+            "archive/astronomy_00145.txt",
+            "archive/shipping_00711.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "scripts/dump.py",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q19",
+          "query": "replace expired access keys",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/rotation.yml",
+            "docs/retention.md",
+            "docs/cache.md",
+            "docs/idempotency.md",
+            "docs/disaster-recovery.md",
+            "archive/cycling_00563.txt",
+            "archive/cycling_00667.txt",
+            "archive/cycling_00763.txt",
+            "archive/cycling_00915.txt",
+            "archive/cycling_00267.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/rotation.yml",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q20",
+          "query": "sipariş iptalinde ücret iadesi",
+          "category": "multilingual",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/turkish.md",
+            "backups/backup_prod_db.sql",
+            "invoices/previous.json",
+            "docs/idempotency.md",
+            "contracts/other.json",
+            "media/pump_thermal_inspection.png",
+            "contracts/registry.json",
+            "invoices/current.json",
+            "models/surface_defect_detector.pt",
+            "releases/v1.2.30.md"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/turkish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "backups/backup_prod_db.sql",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "invoices/previous.json",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q21",
+          "query": "notify the user after a refund is completed",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "docs/disaster-recovery.md",
+            "inventory/catalogue.json",
+            "docs/queues.md",
+            "docs/retention.md",
+            "docs/ideas.md",
+            "docs/architecture.md",
+            "releases/v1.2.30.md",
+            "archive/cycling_00163.txt",
+            "archive/cycling_00251.txt",
+            "archive/cycling_00139.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q22",
+          "query": "almacén con pocos productos disponibles",
+          "category": "cross-language",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/spanish.md",
+            "inventory/catalogue.json",
+            "configs/deploy-arm64.yaml",
+            "reports/monthly.txt",
+            "releases/v1.2.30.md",
+            "configs/deploy-amd64.yaml",
+            "archive/shipping_00895.txt",
+            "archive/shipping_00151.txt",
+            "archive/shipping_00015.txt",
+            "archive/shipping_00127.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/spanish.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "inventory/catalogue.json",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q23",
+          "query": "stop the cooling pump when its temperature is too high",
+          "category": "cross-language",
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr_at_10": 0,
+          "ranked_paths": [
+            "media/pump_thermal_inspection.png",
+            "docs/cache.md",
+            "contracts/registry.json",
+            "releases/v1.2.30.md",
+            "inventory/catalogue.json",
+            "reports/monthly.txt",
+            "docs/disaster-recovery.md",
+            "docs/queues.md",
+            "docs/retention.md",
+            "archive/cycling_00219.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "media/pump_thermal_inspection.png",
+              "start_line": null,
+              "end_line": null
+            },
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "contracts/registry.json",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q24",
+          "query": "retry unfinished work after a process failure",
+          "category": "synonym",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/retention.md",
+            "archive/cycling_00155.txt",
+            "archive/cycling_00179.txt",
+            "archive/cycling_00171.txt",
+            "archive/cycling_00219.txt",
+            "archive/cycling_00243.txt",
+            "archive/cycling_00291.txt",
+            "archive/cycling_00187.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/queues.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/disaster-recovery.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q25",
+          "query": "expire frequently requested product descriptions from memory",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/cache.md",
+            "docs/retention.md",
+            "web/checkout.ts",
+            "src/accounting/settlement.py",
+            "archive/shipping_00471.txt",
+            "archive/shipping_00511.txt",
+            "archive/shipping_00247.txt",
+            "docs/idempotency.md",
+            "archive/shipping_00599.txt",
+            "archive/shipping_00671.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/cache.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "docs/retention.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q26",
+          "query": "connect spans across separate services",
+          "category": "content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "docs/observability.md",
+            "builds/rejected.txt",
+            "reports/monthly.txt",
+            "docs/queues.md",
+            "docs/disaster-recovery.md",
+            "docs/architecture.md",
+            "archive/shipping_00175.txt",
+            "archive/shipping_00663.txt",
+            "archive/shipping_00255.txt",
+            "src/EagleService.cs"
+          ],
+          "top_evidence": [
+            {
+              "path": "docs/observability.md",
+              "start_line": 1,
+              "end_line": 3
+            },
+            {
+              "path": "builds/rejected.txt",
+              "start_line": 1,
+              "end_line": 2
+            },
+            {
+              "path": "reports/monthly.txt",
+              "start_line": 1,
+              "end_line": 2
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q27",
+          "query": "production deployment arm64",
+          "category": "path-and-content",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "configs/deploy-arm64.yaml"
+          ],
+          "top_evidence": [
+            {
+              "path": "configs/deploy-arm64.yaml",
+              "start_line": 1,
+              "end_line": 4
+            }
+          ],
+          "aliases_used": []
+        },
+        {
+          "id": "q28",
+          "query": "sendPurchase browser gateway",
+          "category": "symbol",
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr_at_10": 1.0,
+          "ranked_paths": [
+            "web/client.ts",
+            "web/checkout.ts",
+            "docs/idempotency.md",
+            "docs/architecture.md",
+            "archive/shipping_00463.txt",
+            "archive/shipping_00439.txt",
+            "archive/shipping_00391.txt",
+            "archive/shipping_00191.txt",
+            "archive/shipping_00247.txt",
+            "archive/shipping_00791.txt"
+          ],
+          "top_evidence": [
+            {
+              "path": "web/client.ts",
+              "start_line": 1,
+              "end_line": 4
+            },
+            {
+              "path": "web/checkout.ts",
+              "start_line": 1,
+              "end_line": 5
+            },
+            {
+              "path": "docs/idempotency.md",
+              "start_line": 1,
+              "end_line": 3
+            }
+          ],
+          "aliases_used": []
+        }
+      ]
+    }
+  ]
+}

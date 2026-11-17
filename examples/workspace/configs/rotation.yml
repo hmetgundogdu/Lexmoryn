@@ -1,0 +1,4 @@
+credential_rotation:
+  interval_days: 30
+  strategy: replace expired access keys
+  owner: operations

@@ -1,0 +1,1 @@
+-- Synthetic placeholder; SQL extraction is intentionally unsupported in v0.

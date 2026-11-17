@@ -2,7 +2,28 @@
 
 **Workspace-aware semantic understanding, memory, and retrieval for heterogeneous files.**
 
-> **Status: research proposal / pre-implementation.** Lexmoryn does not yet ship a trained model, benchmark results, CLI, or production-ready search engine. The documents in this repository define hypotheses and a testable research agenda, not verified capabilities.
+> **Status on `experiment/semantic-retrieval-mvp`: experimental local CLI.** This branch implements exact/BM25, pretrained multilingual dense retrieval, hybrid retrieval, and evidence-linked workspace aliases. It includes a reproducible synthetic experiment, not a trained Lexmoryn model or a production-ready search engine. The research documents below remain proposals.
+
+## Run the experiment
+
+Requires Python 3.12 and [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync --locked
+uv run --offline lexmoryn index examples/workspace
+uv run --offline lexmoryn search examples/workspace "pressure sensor"
+
+# Optional semantic baseline: install dependencies, then explicitly download weights once.
+uv sync --locked --extra semantic
+uv run lexmoryn download-model
+uv run --offline lexmoryn index examples/workspace --semantic
+uv run --offline lexmoryn search examples/workspace "payment processing service" --mode memory
+uv run --offline lexmoryn related examples/workspace src/accounting/settlement.py
+```
+
+Indexing and search run locally. Only `download-model` downloads model assets; workspace content is never sent to an embedding API. Models, indexes and generated workspaces stay in ignored `.lexmoryn/` directories.
+
+See [setup, CLI, memory format and limitations](docs/MVP.md), the [1,000-file experiment report](docs/experiments/ISSUE_1_REPORT.md), and [raw measured results](docs/experiments/issue-1-results.json). The 28 relevance judgments are agent-authored synthetic fixtures, explicitly **not independent human annotations**.
 
 Lexmoryn explores whether a lightweight multilingual semantic model, combined with evidence-grounded workspace memory, can make unstructured files easier to understand, connect, and retrieve.
 
@@ -14,7 +35,7 @@ A filename such as `backup_prod_db_2026_11_18.sql` might yield normalized concep
 
 **The core model describes meaning; the application decides what to do with it.** Renaming, path organization, classification, and agent search are optional downstream uses, not model-generated side effects.
 
-## Proposed capabilities (not implemented)
+## Proposed capabilities (research scope)
 
 - **Semantic parsing:** recognize meaningful spans in short, noisy names and longer text.
 - **Open-vocabulary concepts:** preserve novel terms and identifiers rather than forcing every span into a closed label set.
@@ -104,7 +125,7 @@ The project will first establish a dataset and reproducible benchmarks. **No cus
 
 ## Project stage and contributions
 
-This repository currently contains design documents, not a runnable package. Contributions are welcome as discussions, datasets that can legally be shared, benchmark ideas, and falsifiable research questions.
+This experiment branch contains a runnable retrieval baseline alongside the original design documents. `main` remains the documentation/research baseline until the experiment is reviewed. Contributions are welcome as discussions, permission-safe datasets, benchmark ideas, and falsifiable research questions.
 
 **Licensing:** A code/model/data license has not yet been selected. Do not assume the repository contents, future model weights, and future datasets have identical redistribution rights.
 
