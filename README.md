@@ -25,21 +25,21 @@ A filename such as `backup_prod_db_2026_11_18.sql` might yield normalized concep
 
 ## Research architecture
 
-```text
-Files / paths / content / metadata
-                  |
-        Format-aware extraction
-                  |
-     Chunking + structural parsing
-                  |
-   Semantic model (concepts / links)
-                  |
-      Workspace knowledge layer
-       (evidence + scoped memory)
-                  |
-       Hybrid retrieval / API
-                  |
-     Agents, search, organization
+```mermaid
+flowchart TD
+    A["Workspace: files, paths, content, metadata"] --> B["Discovery and format-aware extraction"]
+    B --> C["Segments and structural parsing"]
+    C --> D["Semantic parsing"]
+    D --> E["Concepts and evidence"]
+    E --> F["Scoped workspace memory"]
+    C --> G["Lexical and exact index"]
+    C --> H["Dense vector index"]
+    F --> I["Grounded context expansion"]
+    G --> J["Hybrid retrieval and ranking"]
+    H --> J
+    I --> J
+    J --> K["Permission checks and grounded results"]
+    K --> L["Agents, search, and user-defined organization"]
 ```
 
 A pretrained model and a workspace's learned knowledge are **different artifacts**. Workspace memory should be rebuildable and isolated per workspace; discovering a new alias should not require fine-tuning model weights.
